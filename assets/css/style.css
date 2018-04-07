@@ -42,6 +42,11 @@ h1 {
     float: right;
 }
 
+.nav-link:hover {
+    color: white;
+    background-color: green;
+}
+
 .main-block {
     margin: auto;
     margin-top: 20px;
@@ -49,7 +54,12 @@ h1 {
     padding: 30px;
     background-color: white;
     width: 900px;
-    overflow: auto;
+}
+
+.main-block::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 h2 {
@@ -61,6 +71,7 @@ h2 {
 
 hr {
     border: 1px solid #333333;
+    background-color: #333333;
 }
 
 #bio {
@@ -78,6 +89,36 @@ hr {
     width: 270px;
     height: 200px;
     border: 10px solid #333333;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.project:hover {
+    border: 10px solid green;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+}
+
+.project-caption {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: #333333;
+}
+
+.project:hover .project-caption {
+    background-color: green;
 }
 
 #form {
